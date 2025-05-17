@@ -1,46 +1,44 @@
-/*
 import fs from 'fs'
 import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
+const { levelling } = '../lib/levelling.js'
+import { promises } from 'fs'
+import { join } from 'path'
+let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text, command }) => {
+try {        
+/*let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}*/
+let { exp, coin, level, role } = global.db.data.users[m.sender]
+let { min, xp, max } = xpRange(level, global.multiplier)
+let name = await conn.getName(m.sender)
+let _uptime = process.uptime() * 1000
+let _muptime
+if (process.send) {
+process.send('uptime')
+_muptime = await new Promise(resolve => {
+process.once('message', resolve)
+setTimeout(resolve, 1000)
+}) * 1000
+}
+let user = global.db.data.users[m.sender]
+let muptime = clockString(_muptime)
+let uptime = clockString(_uptime)
+let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length;
+let totalreg = Object.keys(global.db.data.users).length
+let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
+let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+let mentionedJid = [who]
+let perfil = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://files.catbox.moe/8ghilc.jpg')
+let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
+const vid = ['https://files.catbox.moe/mfcqs7.jpg', 'https://files.catbox.moe/v6ksr6.jpg', 'https://files.catbox.moe/ljmjmj.jpg', 'https://files.catbox.moe/dzo7sc.jpg', 'https://files.catbox.moe/u65da1.jpg', 'https://files.catbox.moe/t7bwy4.jpg']
 
-let handler = async (m, { conn, usedPrefix, __dirname }) => {
-  try {
-    let userId = m.sender
-    let { exp, coin, level, role } = global.db.data.users[userId] || { exp: 0, coin: 0, level: 0, role: 'Sin rango' }
-    let { min, xp, max } = xpRange(level, global.multiplier || 1)
-    let name = await conn.getName(userId)
-    
-    let _uptime = process.uptime() * 1000
-    let uptime = clockString(_uptime)
-    let totalreg = Object.keys(global.db.data.users).length
-    let perfil = await conn.profilePictureUrl(userId, 'image').catch(_ => 'https://files.catbox.moe/g6u1f5.jpg')
-    let taguser = '@' + userId.split("@s.whatsapp.net")[0]
-
-    let images = [
-      'https://files.catbox.moe/mfcqs7.jpg',
-      'https://files.catbox.moe/v6ksr6.jpg',
-      'https://files.catbox.moe/ljmjmj.jpg',
-      'https://files.catbox.moe/dzo7sc.jpg',
-      'https://files.catbox.moe/u65da1.jpg',
-      'https://files.catbox.moe/t7bwy4.jpg'
-    ]
-    let randomImage = images[Math.floor(Math.random() * images.length)]  
-
-    let botname = '⏤͟͟͞͞⋆⬪࣪ꥈ⚔️★ ׄ ꒱ 𝑺𝒉𝒂𝒅𝒐𝒘 - 𝑴𝑫୭'
-    let dev = 'Powered •By ꧁⟣٭𝙽𝙻𝙰٭⟢꧂'
-    let redes = 'https://whatsapp.com/channel/0029VawF8fBBvvsktcInIz3m'
-        let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length;
-    let emojis = '🍁'
-    let error = '❌'
-
-    let menu = `
-           ⏜፝֟꯬𝆂𝆂݊݊︵᮫ׄᜓ𝆂߭⏜᮫֟፝߭ᜓꥇ︵ᜓ᮫𝆂߭݊꯬ꥇ⏜֟፝ᜓ᮫߭︵ꥇ𝆂݊
-            𓆩⿻⃟🍒 ꙲𝑺꯭ℋ꯭𝗔꯭𝗗꯭𝗢꯭𝗪𓆪          
+let menu = `
+            ⏜፝֟꯬𝆂𝆂݊݊︵᮫ׄᜓ𝆂߭⏜᮫֟፝߭ᜓꥇ︵ᜓ᮫𝆂߭݊꯬ꥇ⏜֟፝ᜓ᮫߭︵ꥇ𝆂݊
+            𓆩⿻⃟🍒 ꙲𝕀꯭𝐍꯭𝑭꯭𝒾꯭𝐧𝚒꯭𝚝𝚢𓆪          
       ⏝፝֟꯬ꥇ᮫𝆂݊ᜓ߭ׄ︶᮫߭⏝֟፝ᜓ᮫𝆂߭ׄ݊ꥇᜓ᮫߭︶ᜓ᮫߭⏝֟፝ᜓ᮫𝆂߭݊ꥇ︶ᜓ᮫߭ꥇ⏝᮫𝆂֟፝߭݊ꥇ︶⏝ᜓ᮫߭.
 
-╭━━❍ 𝗦𝗛𝗔𝗗𝗢𝗪-𝗕𝗢𝗧
+╭━━❍ 𝗜𝗡𝗙𝗜𝗡𝗜𝗧𝗬-𝗕𝗢𝗧
 ┃╭──────────────
-┃┃ *❤️ Hola @${userId.split('@')[0]} Soy ${botname}*
+┃┃ *❤️ Hola @${taguser} Soy ${botname}*
 ┃╰──────────────
 ┃╭━━━▢     『 \`𝗜𝗡𝗙𝗢\` 』
 ┃┃⋄🍓 𝑶𝒘𝒏𝒆𝒓: ᴏғᴄ
@@ -62,7 +60,7 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
 ├ׁ̟̇.਼ ⃝֟፝˖᜔݊✰ *𝑵𝒊𝒗𝒆𝒍:* ${level}
 ├ׁ̟̇.਼ ⃝֟፝˖᜔݊✰ *𝑹𝒂𝒏𝒈𝒐:* ${role}
 ╰╼⬪࣪ ּּּ ּ｡･ﾟ♡ﾟ･｡.｡･ﾟ♡ﾟ･｡.｡･ﾟ♡ﾟ･｡
-‎‎‎
+
 
 
 *─ׄ─ׄ─⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׅ─*
@@ -509,72 +507,16 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
 *│* ✎ .tts2
 ╰───────────────╯
 
-> ${dev}
-  `.trim();
+> © 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 *☆꧁༒nlaᴏғᴄ༒꧂☆*`.trim()
 
-    await conn.sendMessage(m.chat, {
-      image: { url: randomImage },
-      caption: menu,
-      contextInfo: { 
-        mentionedJid: [m.sender], 
-        isForwarded: true, 
-        forwardedNewsletterMessageInfo: { 
-          newsletterJid: 'channel@example.com', 
-          newsletterName: 'Canal Oficial', 
-          serverMessageId: -1, 
-        }, 
-        forwardingScore: 999, 
-        externalAdReply: { 
-          title: botname, 
-          body: dev, 
-          thumbnailUrl: perfil, 
-          sourceUrl: redes, 
-          mediaType: 1, 
-          renderLargerThumbnail: false 
-        }
-      }
-    })
+await conn.sendMessage(m.chat, { video: { url: vid.getRandom() }, caption: menu, contextInfo: { mentionedJid: [m.sender], isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, newsletterName: channelRD.name, serverMessageId: -1, }, forwardingScore: 999, externalAdReply: { title: '〽️ ꙰,𝕾𝖍𝖆𝖉𝖔𝖜-𝙱𝙾𝚃', body: dev, thumbnailUrl: perfil, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false,
+}, }, gifPlayback: true, gifAttribution: 0 }, { quoted: null })
+await m.react(emojis)    
 
-    await m.react(emojis)    
-    
-    /*let menuText = textFinal.trim() + "\n\n🔹 Selecciona una opción:";
-
-    const buttons = [
-      {
-        buttonId: `${_p}owner`,
-        buttonText: { displayText: "🍭 Ｃ Ｒ Ｅ Ａ Ｄ Ｏ Ｒ" },
-        type: 1,
-      },
-      {
-        buttonId: `${_p}code`,
-        buttonText: { displayText: "🍓 Ｓ Ｅ Ｒ Ｂ Ｏ Ｔ" },
-        type: 1,
-      },      {
-        buttonId: `${_p}grupos`,
-        buttonText: { displayText: "🍹 Ｇ Ｒ Ｕ Ｐ Ｏ Ｓ" },
-        type: 1,
-      },
-    ];
-
-    //let img = 'https://qu.ax/JznsE.jpg';
-    //await m.react('⚽️');
-
-    await conn.sendMessage(
-      m.chat,
-      {
-        image: { url: images },
-        caption: menu,
-        buttons: buttons,
-        footer: "WHATSAPP BOT",
-        viewOnce: true,
-      },
-      { quoted: m }
-    ); */
-  } catch (e) {
-    await m.reply(`✘ Ocurrió un error al enviar el menú\n\n${e}`)
-    await m.react(error)
-  }
-}
+} catch (e) {
+await m.reply(`✘ Ocurrió un error al enviar el menú\n\n${e}`)
+await m.react(error)
+}}
 
 handler.help = ['menu']
 handler.tags = ['main']
@@ -582,9 +524,10 @@ handler.command = ['menu', 'help', 'menú', 'allmenú', 'allmenu', 'menucompleto
 handler.register = true
 export default handler
 
+const more = String.fromCharCode(8206)
+const readMore = more.repeat(4001)
 function clockString(ms) {
-  let h = Math.floor(ms / 3600000)
-  let m = Math.floor(ms / 60000) % 60
-  let s = Math.floor(ms / 1000) % 60
-  return [h, m, s].map(v => v.toString().padStart(2, '0')).join(':')
-}
+let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
+let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
+return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
