@@ -25,8 +25,7 @@
 <!-- RAINBOW LINE BOT -->
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
-> [!TIP]
-
+`--------------------`
 
 ### **`✧ Click en la imagen para descargar termux ✧`**
 <a
@@ -102,7 +101,6 @@ Si después de instalar el bot en Termux y iniciar la session del bot (el numero
     ```
     
 ### **✰ Volverte owner del Bot**
-
 > Si después de instalar el bot en Termux y iniciar la session del bot (deseas poner tu número es la lista de owner pon este comando:
 
    ```bash
