@@ -1,16 +1,5 @@
-
-</div>
-
 ## `【👑】INFINITY BOT MD`
 
-<p align="center">   
-<a href="https://github.com/The-27/$/watchers"><img title="Watchers" src="https://img.shields.io/github/watchers/The-27/Infinity-Bot-MD?label=Watchers&color=green&style=flat-square"></a>
-<a href="https://github.com/The-27/Infinity-Bot-MD/stargazers"><img title="Stars" src="https://img.shields.io/github/stars/The-27/Infinity-Bot-MD?label=Stars&color=yellow&style=flat-square"></a>
-<a href="https://github.com/The-27/Infinity-Bot-MD/watchers"><img title="espectadores" src="https://img.shields.io/github/watchers/Infinity-Bot-MD?label=Espectadores&style=social"></a>
-</p>
-
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com/?lines= ꧁⟣٭𝕹𝕷𝕬٭⟢꧂+lanzó ;Nueva+versión+3.0.4 ; By:+The+nla; SHADOW+Bot!&font=Fira%20Code&center=true&width=380&height=50&duration=2000&pause=500" alt="Example Usage - README Typing SVG">
 
 ![Pene](https://qu.ax/NTCEQ.jpg)
 
