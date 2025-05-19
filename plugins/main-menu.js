@@ -17,12 +17,7 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
     let taguser = '@' + userId.split("@s.whatsapp.net")[0]
 
     let images = [
-      'https://files.catbox.moe/uvclrz.jpg',
-      'https://files.catbox.moe/uvclrz.jpg',
-      'https://files.catbox.moe/uvclrz.jpg',
       'https://files.catbox.moe/1um2tn.jpg',
-      'https://files.catbox.moe/1um2tn.jpg',
-      'https://files.catbox.moe/1um2tn.jpg'
     ]
     let randomImage = images[Math.floor(Math.random() * images.length)]  
 
@@ -556,7 +551,7 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
       },
     ];
 
-    //let img = 'https://qu.ax/JznsE.jpg';
+    //let img = 'https://files.catbox.moe/1um2tn.jpg';
     //await m.react('⚽️');
 
     await conn.sendMessage(
