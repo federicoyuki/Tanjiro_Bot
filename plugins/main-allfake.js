@@ -27,14 +27,14 @@ return res.data
 console.log(`Error : ${e}`)
 }}
   
-global.creador = 'Wa.me/51969214380'
+global.creador = 'Wa.me/5491156178758'
 global.ofcbot = `${conn.user.jid.split('@')[0]}`
 global.namechannel = '=͟͟͞👑𝐏𝐨𝐰𝐞𝐫 𝐥𝐞𝐠𝐞𝐧𝐝 `𝐬 𝐜𝐥𝐮𝐛⏤͟͟͞͞★ • ᥙ⍴ძᥲ𝗍ᥱs ⌺'
 global.namechannel2 = '=͟͟͞👑𝐏𝐨𝐰𝐞𝐫 𝐥𝐞𝐠𝐞𝐧𝐝 `𝐬 𝐜𝐥𝐮𝐛⏤͟͟͞͞★• ᥲ᥎іs᥆s ⌺'
 global.namegrupo = '=͟͟͞👑𝐏𝐨𝐰𝐞𝐫 𝐥𝐞𝐠𝐞𝐧𝐝 `𝐬 𝐜𝐥𝐮𝐛⏤͟͟͞͞★ • ᥆𝖿іᥴіᥲᥣ ⌺'
 global.namecomu = '=͟͟͞👑𝐏𝐨𝐰𝐞𝐫 𝐥𝐞𝐠𝐞𝐧𝐝 `𝐬 𝐜𝐥𝐮𝐛⏤͟͟͞͞★ • ᥴ᥆mᥙᥒі𝗍ᥡ ⌺'
 global.listo = '*Aquí tienes ฅ^•ﻌ•^ฅ*'
-global.fotoperfil = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://files.catbox.moe/fh98lp.jpg')
+global.fotoperfil = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://files.catbox.moe/1um2tn.jpg')
 
 global.canalIdM = ["120363402097425674@newsletter", "120363402097425674@newsletter", "120363402097425674@newsletter"]
 global.canalNombreM = ["=͟͟͞👑𝐏𝐨𝐰𝐞𝐫 𝐥𝐞𝐠𝐞𝐧𝐝 '𝐬 𝐜𝐥𝐮𝐛⏤͟͟͞͞★", "̶۫̄͟=͟͟͞👑𝐏𝐨𝐰𝐞𝐫 𝐥𝐞𝐠𝐞𝐧𝐝 '𝐬 𝐜𝐥𝐮𝐛⏤͟͟͞͞★","=͟͟͞👑𝐏𝐨𝐰𝐞𝐫 𝐥𝐞𝐠𝐞𝐧𝐝 '𝐬 𝐜𝐥𝐮𝐛⏤͟͟͞͞★"]
@@ -98,9 +98,9 @@ global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo
 }}, { quoted: m }
 
 global.icono = [ 
-'https://files.catbox.moe/ecsjyw.jpg',
-'https://files.catbox.moe/pyqdkx.jpg',
-'https://files.catbox.moe/m78lj2.jpg'
+'https://files.catbox.moe/1um2tn.jpg',
+'https://files.catbox.moe/uvclrz.jpg',
+'https://files.catbox.moe/uvclrz.jpg'
 ].getRandom()
 
 global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, serverMessageId: 100, newsletterName: channelRD.name, }, externalAdReply: { showAdAttribution: true, title: packname, body: dev, mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
