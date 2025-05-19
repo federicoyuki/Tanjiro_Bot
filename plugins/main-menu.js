@@ -27,7 +27,7 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
     let randomImage = images[Math.floor(Math.random() * images.length)]  
 
     let botname = '⏤͟͟͞͞⋆⬪࣪ꥈ⚔️★ ׄ ꒱ 𝑺𝒉𝒂𝒅𝒐𝒘 - 𝑴𝑫୭'
-    let dev = 'Powered •By ꧁⟣٭𝙽𝙻𝙰٭⟢꧂'
+    let dev = 'Powered •By 𝘧𝘦𝘥𝘦𝘭𝘢𝘯𝘠𝘛'
     let redes = 'https://whatsapp.com/channel/0029VawF8fBBvvsktcInIz3m'
         let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length;
     let emojis = '🍁'
@@ -35,10 +35,10 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
 
     let menu = `
            ⏜፝֟꯬𝆂𝆂݊݊︵᮫ׄᜓ𝆂߭⏜᮫֟፝߭ᜓꥇ︵ᜓ᮫𝆂߭݊꯬ꥇ⏜֟፝ᜓ᮫߭︵ꥇ𝆂݊
-            𓆩⿻⃟🍒 ꙲𝑺꯭ℋ꯭𝗔꯭𝗗꯭𝗢꯭𝗪𓆪          
+            𓆩⿻⃟🍒𝘛𝘈𝘕𝘑𝘐𝘙𝘖-𝘉𝘖𝘛𓆪          
       ⏝፝֟꯬ꥇ᮫𝆂݊ᜓ߭ׄ︶᮫߭⏝֟፝ᜓ᮫𝆂߭ׄ݊ꥇᜓ᮫߭︶ᜓ᮫߭⏝֟፝ᜓ᮫𝆂߭݊ꥇ︶ᜓ᮫߭ꥇ⏝᮫𝆂֟፝߭݊ꥇ︶⏝ᜓ᮫߭.
 
-╭━━❍ 𝗦𝗛𝗔𝗗𝗢𝗪-𝗕𝗢𝗧
+╭━━❍ 𝘛𝘈𝘕𝘑𝘐𝘙𝘖-𝘉𝘖𝘛
 ┃╭──────────────
 ┃┃ *❤️ Hola @${userId.split('@')[0]} Soy ${botname}*
 ┃╰──────────────
