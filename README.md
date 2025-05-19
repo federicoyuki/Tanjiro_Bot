@@ -1,11 +1,3 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=150&section=header&text=Bienvenidos%20-%20al+repositorio+del%20Bot%20⚔️&fontSize=30&fontColor=FFFFFF&animation=fadeIn" width="100%"/> 
-
-<div align="center">
- 
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-The-badge&logo=gmail&logoColor=white)](blackoficial2025@gmail.com)
-[![Support](https://img.shields.io/badge/Support-2CA5E0?style=for-The-badge&logo=telegram&logoColor=white)](https://t.me/The-27)
-[![WhatsApp](https://img.shields.io/badge/OWENER-25D366?style=for-The-badge&logo=whatsapp&logoColor=white)](https://wa.me/51994114690)
-[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-The-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@FlorencioAcaro)
 
 </div>
 
