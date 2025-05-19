@@ -1,5 +1,5 @@
-## `【👑】INFINITY BOT MD`
-![Pene](https://qu.ax/NTCEQ.jpg)
+## `【👑】TANJIRO-BOT`
+![Pene](https://files.catbox.moe/1um2tn.jpg)
 
 <priv>
  
@@ -120,4 +120,4 @@ href="https://github.com/federicoyuki"><img src="https://github.com/federicoyuki
 
 </details>
 
-> **[✎ P᥆ᥕᥱrᥱძ ᑲᥡ ✧͜͡ℕℒᎯ ❀](https://whatsapp.com/channel/0029Vb6BDQc0lwgsDN1GJ31i)**
+> **[✎ P᥆ᥕᥱrᥱძ ᑲᥡ 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐥𝐞𝐠𝐞𝐧𝐝𝐬'𝐬 𝐜𝐥𝐮𝐛❀](https://whatsapp.com/channel/0029VbApe6jG8l5Nv43dsC2N)**
