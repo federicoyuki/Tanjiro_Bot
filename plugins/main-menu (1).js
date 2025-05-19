@@ -29,14 +29,14 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 let mentionedJid = [who]
 let perfil = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://files.catbox.moe/8ghilc.jpg')
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
-const vid = ['https://files.catbox.moe/mfcqs7.jpg', 'https://files.catbox.moe/v6ksr6.jpg', 'https://files.catbox.moe/ljmjmj.jpg', 'https://files.catbox.moe/dzo7sc.jpg', 'https://files.catbox.moe/u65da1.jpg', 'https://files.catbox.moe/t7bwy4.jpg']
+const vid = ['https://files.catbox.moe/uvclrz.jpg', 'https://files.catbox.moe/uvclrz.jpg', 'https://files.catbox.moe/uvclrz.jpg', 'https://files.catbox.moe/1um2tn.jpg', 'https://files.catbox.moe/1um2tn.jpg', 'https://files.catbox.moe/1um2tn.jpg']
 
 let menu = `
             ⏜፝֟꯬𝆂𝆂݊݊︵᮫ׄᜓ𝆂߭⏜᮫֟፝߭ᜓꥇ︵ᜓ᮫𝆂߭݊꯬ꥇ⏜֟፝ᜓ᮫߭︵ꥇ𝆂݊
-            𓆩⿻⃟🍒 ꙲𝕀꯭𝐍꯭𝑭꯭𝒾꯭𝐧𝚒꯭𝚝𝚢𓆪          
+            𓆩⿻⃟🍒𝘛𝘈𝘕𝘑𝘐𝘙𝘖-𝘉𝘖𝘛𓆪          
       ⏝፝֟꯬ꥇ᮫𝆂݊ᜓ߭ׄ︶᮫߭⏝֟፝ᜓ᮫𝆂߭ׄ݊ꥇᜓ᮫߭︶ᜓ᮫߭⏝֟፝ᜓ᮫𝆂߭݊ꥇ︶ᜓ᮫߭ꥇ⏝᮫𝆂֟፝߭݊ꥇ︶⏝ᜓ᮫߭.
 
-╭━━❍ 𝗜𝗡𝗙𝗜𝗡𝗜𝗧𝗬-𝗕𝗢𝗧
+╭━━❍ 𝘛𝘈𝘕𝘑𝘐𝘙𝘖-𝘉𝘖𝘛
 ┃╭──────────────
 ┃┃ *❤️ Hola @${taguser} Soy ${botname}*
 ┃╰──────────────
@@ -507,7 +507,7 @@ let menu = `
 *│* ✎ .tts2
 ╰───────────────╯
 
-> © 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 *☆꧁༒nlaᴏғᴄ༒꧂☆*`.trim()
+> © 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 *𝘧𝘦𝘥𝘦𝘭𝘢𝘯𝘠𝘛*`.trim()
 
 await conn.sendMessage(m.chat, { video: { url: vid.getRandom() }, caption: menu, contextInfo: { mentionedJid: [m.sender], isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, newsletterName: channelRD.name, serverMessageId: -1, }, forwardingScore: 999, externalAdReply: { title: '〽️ ꙰,𝕾𝖍𝖆𝖉𝖔𝖜-𝙱𝙾𝚃', body: dev, thumbnailUrl: perfil, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false,
 }, }, gifPlayback: true, gifAttribution: 0 }, { quoted: null })
