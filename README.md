@@ -1,10 +1,8 @@
 ## `【👑】INFINITY BOT MD`
-
-
 ![Pene](https://qu.ax/NTCEQ.jpg)
 
-[![Botoncito🥵](https://img.shields.io/badge/SHADOW_BOT_DE_WHATSAPP🍨-E4405F?style=for-The-badge&logo=shadow&logoColor=yellow)](https://github.com/Infinity-Bot-MD)
-
+<priv>
+ 
 ### `—◉ ⚙️𝗖𝗼𝗻𝗳𝗶𝗴𝘂𝗿𝗮𝗰𝗶𝗼𝗻⚙️`
 <details>
  <summary><b> 🦎 ENLACES OFICIALES </b></summary>
@@ -50,7 +48,7 @@ apt update && apt upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn
 ```
 
 ```bash
-git clone https://github.com/The-27/Infinity-Bot-MD && cd Infinity-Bot-MD 
+git clone https://github.com/federicoyuki/Tanjiro_Bot && cd Tanjiro_Bot 
 ```
 
 ```bash
@@ -74,7 +72,7 @@ Si después de instalar el bot en Termux se detiene (pantalla en blanco, pérdid
 
 1. Abre Termux y navega al directorio del bot:
     ```bash
-    cd Infinity-Bot-MD
+    cd Tanjiro_Bot
     ```
 
 2. Inicia el bot nuevamente:
@@ -90,7 +88,7 @@ Si después de instalar el bot en Termux y iniciar la session del bot (el numero
 
 1. Abre Termux y navega al directorio del bot:
     ```bash
-    cd Infinity-Bot-MD
+    cd Tanjiro_Bot
     ```
 
 2. Elimina la carpeta MiniSession:
@@ -108,7 +106,7 @@ Si después de instalar el bot en Termux y iniciar la session del bot (el numero
 > Si después de instalar el bot en Termux y iniciar la session del bot (deseas poner tu número es la lista de owner pon este comando:
 
    ```bash
-    cd Infinity-Bot-MD && nano settings.js
+    cd Tanjiro_Bot && nano settings.js
    ```
 
 </details>    
@@ -122,7 +120,7 @@ Si después de instalar el bot en Termux y iniciar la session del bot (el numero
 
 ## **`⚔️ 𝑷𝒓𝒐𝒑𝒊𝒆𝒕𝒂𝒓𝒊𝒐 𝑫𝒆𝒍 𝑩𝒐𝒕`**
 <a
-href="https://github.com/The-27"><img src="https://github.com/The-27.png" width="130" height="130" alt="WillZek"/></a>
+href="https://github.com/federicoyuki"><img src="https://github.com/federicoyuki.png" width="130" height="130" alt="WillZek"/></a>
 
 </details>
 
